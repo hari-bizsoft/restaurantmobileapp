@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.bizsoft.restaurant"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26.1.0'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    compile 'net.bohush.geometricprogressview:geometricprogressview:1.1.1'
+    compile 'me.anwarshahriar:calligrapher:1.0'
+    compile 'com.itextpdf:itextpdf:5.0.6'
+    compile 'com.github.yesidlazaro:GmailBackground:1.2.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+
+    compile "android.arch.lifecycle:extensions:1.0.0"
+    compile 'com.github.madrapps:pikolo:1.1.6'
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
+    compile 'com.turki-alkhateeb:materialcolorpicker:1.0.7'
+
+
+
+}
+repositories {
+    mavenCentral()
+}

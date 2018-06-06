@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bizsoft.restaurant">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.FloatingFaceBubbleService" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".RestaurantActivity" />
+        <activity android:name=".CategoryActvity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".BillActivity" />
+        <activity android:name=".ShowBillActivity" />
+        <activity android:name=".ReportsActivity" />
+        <activity android:name=".InvoiceListActivity" />
+        <activity android:name=".TableActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".ItemsActivity" />
+        <activity
+            android:name=".KOTViewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="landscape" />
+        <activity android:name=".MealTimingActivity" />
+        <activity android:name=".Forms.CreateItems" />
+        <activity android:name=".Forms.CreateCategoryActivity" />
+        <activity android:name=".Forms.BizTableActivity" />
+        <activity android:name=".Forms.UserActivity" />
+        <activity android:name=".Forms.UOMCreateActivity" />
+        <activity android:name=".Forms.CreateKOTChannelActivity" />
+        <activity android:name=".Forms.MealSessionCreate" />
+        <activity android:name=".service.StartActivity">
+
+        </activity>
+        <activity android:name=".ConfigurationActivity" />
+        <activity android:name=".ConfigurationActivity2" />
+        <activity
+            android:name=".ConfigurationActivity3"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_configuration3"
+            android:theme="@style/FullscreenTheme" />
+    </application>
+
+</manifest>

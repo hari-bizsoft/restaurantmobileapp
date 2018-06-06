@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dc2e2b</color>
+    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorAccent">#ff8f32</color>
+    <color name="testcolor1">#ffffff</color>
+    <color name="testcolor3">#ccc5bf</color>
+    <color name="testcolor2">#f44336</color>
+    <color name="testcolor5">#616161</color>
+    <color name="testcolor">#616161</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>
